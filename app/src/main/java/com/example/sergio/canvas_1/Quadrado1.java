@@ -8,9 +8,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-/**
- * Created by sergio on 04/04/2016.
- */
 public class Quadrado1 extends View {
     // definir a cor a ser utilizada
     private Paint pincelVermelho;
@@ -28,6 +25,7 @@ public class Quadrado1 extends View {
 
     public Quadrado1(Context context, AttributeSet attrs) {
         super(context,attrs);
+
         setBackgroundColor(Color.LTGRAY);
         //Vermelho
         pincelVermelho = new Paint();
