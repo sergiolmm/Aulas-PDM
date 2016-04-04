@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,6 +21,8 @@ public class Quadrado1 extends View {
     public int cy = 100;
 
     public  boolean selecionou;
+
+    private Drawable imgProg;
 
     public Quadrado1(Context context) {
         this(context,null );
@@ -39,6 +42,9 @@ public class Quadrado1 extends View {
         pincelAzul = new Paint();
         pincelAzul.setARGB(255,0,0,255);
 
+        imgProg = context.getResources().getDrawable(R.drawable.programador);
+
+
         // configura a view para receber foco e tratar eventos de teclado
         setFocusable(true);
     }
@@ -47,6 +53,10 @@ public class Quadrado1 extends View {
     public void onDraw(Canvas canvas){
         super.onDraw(canvas);
 
+        imgProg.setBounds(150,150,
+                imgProg.getIntrinsicWidth() -100 ,
+                imgProg.getIntrinsicHeight() - 100);
+        imgProg.draw(canvas);
 
 
         //desenha quadrado
@@ -56,6 +66,8 @@ public class Quadrado1 extends View {
 
         // desenha circulo
         canvas.drawCircle(cx, cy, 20, pincelVermelho);
+
+
 
     }
 
