@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 
+
 public class Quadrado1 extends View {
     // definir a cor a ser utilizada
     private Paint pincelVermelho;
